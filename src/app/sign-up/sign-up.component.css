@@ -1,0 +1,41 @@
+.container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    height: 100vh !important;
+    padding-top: 50px;
+}
+
+.card {
+    width: 400px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-body {
+    padding: 20px !important;
+}
+
+.login-heading {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+}
+
+.form-group {
+    margin-bottom: 15px !important;
+}
+
+label {
+    font-weight: bold !important;
+}
+
+.error-message {
+    color: red !important;
+    margin-top: 5px !important;
+}
+
+.btn-primary {
+    width: 100% !important;
+}

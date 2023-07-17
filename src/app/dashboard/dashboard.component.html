@@ -1,0 +1,51 @@
+<!-- User Table-->
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="login-heading">User Information</h1>
+            <button type="button" class="btn btn-primary ml-auto mb-2" [routerLink]="['/addUser']">
+                Add User
+            </button>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">
+                                <div>
+                                    <input class="me-2" type="checkbox" id="selectAllCheckbox"
+                                        (change)="toggleSelectAll()" [checked]="isAllSelected()">
+                                    <label for="selectAllCheckbox">Select All</label>
+                                </div>
+                            </th>
+                            <th style="width: 20%;">Id</th>
+                            <th style="width: 20%;">Name</th>
+                            <th style="width: 20%;">Email</th>
+                            <th style="width: 20%;">Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngIf="userList.length == 0">
+                            <td colspan="6" class="text-center bold"><strong>No Records Found! </strong></td>
+                        </tr>
+                        <tr *ngFor="let user of userList; let i=index">
+                            <td>
+                                <input type="checkbox" name="checkbox{{i}}" id="checkbox{{i}}" [value]="user | json"
+                                    (change)="onSelectedUser($event)" [checked]="isSelected(user)">
+                            </td>
+                            <td><a style="text-decoration: none;" [routerLink]="['/editUser/',user.id]">{{i+1}}</a></td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>
+                                <input type="password" class="form-control border-0" [value]="user.password" readonly>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-danger ml-auto mt-2" (click)="deleteSelectedUsers();"
+                [disabled]="selectedUserList.length == 0">
+                Delete Selected User
+            </button>
+        </div>
+    </div>
+</div>

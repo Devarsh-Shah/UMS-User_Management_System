@@ -1,0 +1,72 @@
+.container {
+  margin-top: 50px !important;
+}
+
+.card {
+  border-radius: 10px !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-body {
+  padding: 20px !important;
+}
+
+
+.table {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+label {
+  font-weight: bold !important;
+}
+
+.login-heading {
+  font-size: 24px !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+.form-group {
+  margin-bottom: 15px !important;
+}
+
+.modal-dialog {
+  display: flex;
+  place-items: center;
+  height: 100vh;
+  align-content: center;
+}
+
+.modal-body {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+
+}
+
+.model-body-card {
+  width: 400px !important;
+}
+
+.model-body-card-body {
+  padding: 20px !important;
+}
